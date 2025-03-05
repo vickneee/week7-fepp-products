@@ -74,7 +74,7 @@ const ProductPage = () => {
           <p>Company: {product.supplier.name}</p>
           <p>Email: {product.supplier.contactEmail}</p>
           <p>Phone: {product.supplier.contactPhone}</p>
-          <p>Rating: {product.rating}</p>
+          <p>Rating: {product.supplier.rating}</p>
           <div className="align-row">
             <Link to={`/edit-product/${product.id}`} className={"btn"}>Edit</Link>
             <Link to='/' className="btn"
