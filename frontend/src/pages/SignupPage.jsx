@@ -7,10 +7,9 @@ const Signup = ({ setIsAuthenticated }) => {
   const name = useField("text");
   const email = useField("email");
   const password = useField("password");
-  const phoneNumber = useField("text");
-  const gender = useField("text");
-  const dateOfBirth = useField("date");
-  const membershipStatus = useField("text");
+  const role = useField("text");
+  const lastLogin = useField("date");
+  const bio = useField("text");
   
   const { signup, error } = useSignup("/api/users/signup");
   
@@ -20,10 +19,9 @@ const Signup = ({ setIsAuthenticated }) => {
       email: email.value,
       password: password.value,
       name: name.value,
-      phone_number: phoneNumber.value,
-      gender: gender.value,
-      date_of_birth: dateOfBirth.value,
-      membership_status: membershipStatus.value,
+      role: role.value,
+      lastLogin: lastLogin.value,
+      bio: bio.value,
     });
     if (!error) {
       console.log("success");
@@ -42,14 +40,11 @@ const Signup = ({ setIsAuthenticated }) => {
         <input {...email} />
         <label>Password:</label>
         <input {...password} />
-        <label>Phone Number:</label>
-        <input {...phoneNumber} />
-        <label>Gender:</label>
-        <input {...gender} />
-        <label>Date of Birth:</label>
-        <input {...dateOfBirth} />
-        <label>Membership Status:</label>
-        <input {...membershipStatus} />
+        <label>Role</label>
+        <input {...role} />
+        <label>Bio</label>
+        <input {...bio} />
+
         <button>Sign up</button>
       </form>
     </div>
