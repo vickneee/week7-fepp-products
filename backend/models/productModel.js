@@ -14,7 +14,7 @@ const productSchema = new mongoose.Schema({
     },
   });
 
-  //add  virtual field id
+  // Add virtual field id
 productSchema.set('toJSON', {
   virtuals: true,
   transform: (doc, ret) => {
