@@ -71,14 +71,12 @@ const AddProductPage = () => {
           <option value="Clothing">Clothing</option>
           <option value="Furniture">Furniture</option>
         </select>
-
         <label>Product Description:</label>
         <textarea
           required
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         ></textarea>
-
         <label>Price:</label>
         <input
           type="number"
@@ -86,7 +84,6 @@ const AddProductPage = () => {
           value={price}
           onChange={(e) => setPrice(e.target.value)}
         />
-
         <label>Stock Quantity:</label>
         <input
           type="number"
@@ -94,7 +91,6 @@ const AddProductPage = () => {
           value={stockQuantity}
           onChange={(e) => setStockQuantity(e.target.value)}
         />
-
         <label>Supplier Name:</label>
         <input
           type="text"
@@ -121,10 +117,10 @@ const AddProductPage = () => {
           type="number"
           required
           value={rating}
+          min={1}
+          max={5}
           onChange={(e) => setRating(e.target.value)}
         />
-
-
         <button>Add Product</button>
       </form>
     </div>
