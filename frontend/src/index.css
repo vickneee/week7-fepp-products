@@ -137,6 +137,11 @@
   cursor: pointer;
 }
 
+.btn:hover {
+  background: #d32a5c;
+  color: #fff !important;
+}
+
 .align-row {
   display: flex;
   align-items: center;
