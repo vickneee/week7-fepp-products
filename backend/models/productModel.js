@@ -13,6 +13,15 @@ const productSchema = new mongoose.Schema({
       rating: { type: Number, min: 1, max: 5 },
     },
   });
+
+  //add  virtual field id
+productSchema.set('toJSON', {
+  virtuals: true,
+  transform: (doc, ret) => {
+    ret.id = ret._id;
+    return ret;
+  }
+});
   
   const Product = mongoose.model('Product', productSchema);
   
