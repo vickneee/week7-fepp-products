@@ -45,7 +45,7 @@ const Signup = ({ setIsAuthenticated }) => {
         <label>Bio</label>
         <input {...bio} />
 
-        <button>Sign up</button>
+        <button>Sign Up</button>
       </form>
     </div>
   );

@@ -21,13 +21,13 @@ const Login = ({ setIsAuthenticated }) => {
   
   return (
     <div className="create">
-      <h2>Login</h2>
+      <h2>Log In</h2>
       <form onSubmit={handleFormSubmit}>
         <label>Email address:</label>
         <input {...email} />
         <label>Password:</label>
         <input {...password} />
-        <button>Login</button>
+        <button>Log In</button>
       </form>
     </div>
   );
